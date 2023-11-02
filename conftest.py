@@ -4,7 +4,7 @@ from modules.ui.page_objects.base_page import BasePage
 from modules.ui.page_objects.rozetka_cart_page import CartPage
 from modules.ui.page_objects.rozetka_product_page import ProductPage
 
-from tests.api.clients.github2 import GitHub
+from modules.api.clients.github import GitHub
 
 class User:
 
