@@ -7,6 +7,7 @@ class GitHub:
         body = r.json()
         return body
     
+
     def search_repo(self, name):
         r = requests.get(
             'https://api.github.com/search/repositories',
@@ -15,21 +16,29 @@ class GitHub:
         body = r.json()
         return body
     
+
     def search_emojis(self):
         r = requests.get('https://api.github.com/emojis')
         body = r.json()
         return body
+    
     
     def get_commits(self, owner, repo):
         r = requests.get(f'https://api.github.com/repos/{owner}/{repo}/commits')
         body = r.json()
         return body
     
-    def get_head_commit(self, owner, repo, sha):
+    
+    def get_head_commit(self, owner, repo):
+
+        sha = requests.get(f'https://api.github.com/repos/{owner}/{repo}/commits/heads/main').json()['sha']
+
         r = requests.get(f'  https://api.github.com/repos/{owner}/{repo}/commits/{sha}/branches-where-head')
-        body = r.json()
+
+        body = r.json()        
         return body
     
+
     def get_branches(self, owner, repo):
         r = requests.get(f'https://api.github.com/repos/{owner}/{repo}/branches')
         body = r.json()

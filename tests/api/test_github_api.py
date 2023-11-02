@@ -79,7 +79,7 @@ def test_commits_exist(github_api):
 @pytest.mark.api
 def test_head_commit(github_api):
 
-    r = github_api.get_head_commit('YaroslavKovalchuk', 'QA-auto21', '6cef46ed8a67392a17a39d23e8eb116fa2ea447c')
+    r = github_api.get_head_commit('YaroslavKovalchuk', 'QA-auto21')
 
     assert r[0]['name']  == 'main'
 
