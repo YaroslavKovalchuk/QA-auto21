@@ -3,6 +3,7 @@ from modules.ui.page_objects.rozetka_cart_page import CartPage
 from modules.ui.page_objects.rozetka_product_page import ProductPage
 import pytest
 
+# Індивідуальна частина проєктного завдання
 
 @pytest.mark.ui_rozetka
 def test_cart_title(rozetka_cart):

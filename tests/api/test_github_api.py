@@ -1,5 +1,6 @@
 import pytest
 
+# Обов'язкова частина проєктного завдання
 
 @pytest.mark.api
 def test_user_exists(github_api):
@@ -41,6 +42,8 @@ def test_repo_with_single_char_be_found(github_api):
 
     assert r['total_count'] != 0
 
+
+# Індивідуальна частина проєктного завдання
 
 @pytest.mark.api
 def test_emojis_find_specific_emojis(github_api):

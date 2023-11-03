@@ -6,7 +6,8 @@ import pytest
 def test_database_connection(database):
     database.test_connection()
 
-
+# Обов'язкова частина проєктного завдання
+ 
 @pytest.mark.database
 def test_check_all_users(database):
     users = database.get_all_users()
@@ -60,6 +61,8 @@ def test_detailed_orders(database):
     assert orders[0][2] == 'солодка вода'
     assert orders[0][3] == 'з цукром'
 
+
+# Індивідуальна частина проєктного завдання
 
 @pytest.mark.database
 def test_product_insert_with_invalid_data_type_id(database):
