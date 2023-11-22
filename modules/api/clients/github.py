@@ -30,11 +30,8 @@ class GitHub:
     
     
     def get_head_commit(self, owner, repo):
-
         sha = requests.get(f'https://api.github.com/repos/{owner}/{repo}/commits/heads/main').json()['sha']
-
         r = requests.get(f'  https://api.github.com/repos/{owner}/{repo}/commits/{sha}/branches-where-head')
-
         body = r.json()        
         return body
     
